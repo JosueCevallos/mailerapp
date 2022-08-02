@@ -1,6 +1,7 @@
 import os
 from webbrowser import get   #de este modulo saco las variables de entorno para configurar la BBDD y configurar la API
 from flask import Flask, g
+from . import db
 
 def create_app():
     app = Flask(__name__)
@@ -14,4 +15,9 @@ def create_app():
         DATABASE = os.environ.get("FLASK_DATABASE")
     )
 
+    db.init_app(app)
+
+    from . import mail
+    app.register_blueprint(mail.bp)
+    
     return app 
