@@ -28,3 +28,31 @@ def get_db():
             password = current_app.config["DATABASE_PASSWORD"],
             database = current_app.config["FLASK_DATABASE"]
         )
+        g.c = g.db.cursor(dictionary =True)
+    
+    return g.db, g.c
+
+def close_db(e=None):
+    
+    db= g.pop('db',None)
+    if db is not None:
+        db.close()
+
+def init_db():
+    db, c = get_db()
+
+    for i in instructions:
+        c.execute(i)
+    db.commit()
+
+"""----------- BLOQUE PARA INICIALIZAR LA BASE DE DATOS DESDE LA TERMINAL --------------"""
+
+@click.command("init-db")
+@with_appcontext
+def init_db_command():
+    init_db()
+    click.echo("Base de datos inicializada")
+
+def init_app(app):
+    app.teardown_appcontext(close_db)
+    app.cli.add_command(init_db_command)
