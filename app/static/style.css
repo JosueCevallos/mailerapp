@@ -64,7 +64,7 @@ hr {
 }
 
 .email {
-    color: #4de798;
+    color: #9cecc3;
 }
 
 .button {
@@ -75,12 +75,12 @@ hr {
     align-self: center;
     padding: 10px 15px;
     border-radius: 30px;
-    text-decoration: none;  
+    text-decoration: none;  /*elimina el subrayado */
     border: none;
 }
 
 .button:hover {
-    background-color: #67eaa7;
+    background-color: #9cecc3;
 }
 
 textarea {
@@ -91,7 +91,17 @@ textarea {
     border-radius: 30px;
     box-shadow: 0 1px 5px #ddd;
     width: 450px;
-    display: block;
+    display: block;         /*de esta manera el textearea queda debajo del label 'contenido' */
     resize: none;
-    outline: none;
+    outline: none;          /*elimina la linea azul que rodea la caja que pone por defecto chrome */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: inline-block; /*para que respete los espacios entre label y los input */
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
