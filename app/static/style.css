@@ -1,3 +1,83 @@
 body{
     font-family: 'Raleway', sans-serif;
+    background-color: #f5f5f5;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: 0px 1px 2px #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+.content {
+    margin-left: 180px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+form input {
+    font-family: 'Raleway', sans-serif;
+    border: 0;
+    height: 20px;
+    padding: 5px 15px;
+    border-radius: 30px;
+    box-shadow: 0 1px 5px #ddd;
+    outline: none;
+    width: 450px;
+    display: block;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    padding-left: 0;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
+.mail {
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    box-shadow: 0 1 px 5px #ddd;
+    border-radius: 5px;
+}
+
+.mail-content {
+    margin: 5px 0 0 0;
+    color: #aaa; 
+}
+
+.email {
+    color: #4de798;
+}
+
+.button {
+    font-size: 14px;
+    transition: background-color 0.5s ease;
+    color: #fff;
+    background-color: #4de798;
+    align-self: center;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-decoration: none;  
+}
+
+.button:hover {
+    background-color: #67eaa7;
 }
