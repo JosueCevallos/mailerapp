@@ -7,11 +7,12 @@
 
 <nav>
     MAIL<b>ER</b>
+    <footer class="footer">By Josue Cevallos</footer>
 </nav>
 <section class="content">
     <div class="top-bar">
         <form method="get">
-            <input name="search" type="text" placeholder="Que quieres buscar?" />
+            <input name="search" type="text" placeholder="Que quieres buscar?" class="search"/>
         </form>
         {% block action %} {% endblock %}
     </div>
@@ -22,5 +23,7 @@
         <div class="flash">{{ message }}</div>
     {% endfor %}
     {% block content %} {% endblock %}
+    
 </section>
+
 </html>

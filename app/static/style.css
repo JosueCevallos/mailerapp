@@ -16,6 +16,12 @@ nav {
     padding-top: 30px;
 }
 
+.footer {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    margin-top: 700px;
+}
+
 .content {
     margin-left: 180px;
     margin-top: 30px;
@@ -114,4 +120,11 @@ form label {
     border: solid 1px rgba(0,0,0,0.1);
     margin: 5px 0;
     width: 450px;
+}
+.search {
+    transition: 0.2s;
+}
+.search:hover {
+    transform: scale(1.05, 1.05);
+    transition: 0.2s;
 }
